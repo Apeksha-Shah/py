@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+   <style>
+       .project-container {
+           position: relative;
+       }
+
+
+       .project-icon {
+           display: inline-block;
+           font-size: 24px;
+           cursor: pointer;
+       }
+
+
+       .options {
+           display: none;
+           position: absolute;
+           top: 100%;
+           right: 0;
+           background-color: #fff;
+           border: 1px solid #ccc;
+           padding: 5px;
+           box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+       }
+
+
+       .option {
+           padding: 8px;
+           cursor: pointer;
+       }
+
+
+       .option:hover {
+           background-color: #f0f0f0;
+       }
+
+
+       .col {
+           background-color: #e2e2e2;
+           margin-top: 5px;
+           border-radius: 10px;
+           max-width: 100%;
+       }
+
+
+       .col::after {
+           content: '';
+           position: absolute;
+           width: 0;
+           height: 0;
+           border-style: solid;
+           border-width: 10px 10px 0;
+           border-color: #e2e2e2 transparent transparent transparent;
+           top: -10px;
+           left: 50%;
+           transform: translateX(-50%);
+       }
+   </style>
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-dark bg-dark">
+   <div class="container-fluid">
+       <a class="navbar-brand" href="#">TeamSync</a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                   <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+               </li>
+               
+               <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Logout</a>
+            </li>
+           </ul>
+           <form class="d-flex">
+               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+           </form>
+       </div>
+   </div>
+</nav>
+
+
+<div class="project-container" style="float: right;">
+   <div class="project-icon" onmouseover="showOptions()" onmouseout="hideOptions()" style="color:rgb(27, 26, 26);width:35px;">
+       <h1>+</h1>
+       <div class="options">
+           <div class="option" style="font-size: 20px;color:black">Join Existing Project</div>
+           <div class="option" style="font-size: 20px;color:black">Create New Project</div>
+       </div>
+   </div>
+</div>
+
+
+<div class="container" style="margin-right:150px">
+   <div class="cols-cols-cols">
+       <div class="col" data-bs-toggle="collapse" href="#project1" role="button" aria-expanded="false" aria-controls="project1" style="margin-top:50px;background-color: #aaaeb1;padding: 25px;">
+           Project1  <button class="btn btn-primary" style="float:right"onclick="joinProject('project1')">Join</button></div>
+        
+   </div>
+       <div class="collapse" id="project1">
+           <div class="card card-body">
+               <h3>HTML/CSS Ongoing Project</h3>
+               <p>This project involves designing and implementing a responsive website using HTML and CSS. The goal is to create a modern and user-friendly interface for our clients.</p>
+               <p>Status: In Progress</p>
+           </div>       
+       </div>
+
+
+       <div class="col" data-bs-toggle="collapse" href="#project2" role="button" aria-expanded="false" aria-controls="project2" style="margin-top:10px;background-color: #aaaeb1;padding: 25px;">
+           Project2  <button class="btn btn-primary" style="float:right"onclick="joinProject('project1')">Join</button></div>
+       <div class="collapse" id="project2">
+           <div class="card card-body">
+               <h3>Java Application Development</h3>
+               <p>We are working on a Java application that streamlines data processing and analysis. The project involves backend development, database integration, and user interface design.</p>
+               <p>Status: Planning</p>
+             
+           </div>
+       </div>
+
+
+       <div class="col" data-bs-toggle="collapse" href="#project3" role="button" aria-expanded="false" aria-controls="project3" style="margin-top:10px;background-color: #aaaeb1;padding: 25px;">
+           Project3 <button class="btn btn-primary" style="float:right"onclick="joinProject('project1')">Join</button></div>
+       <div class="collapse" id="project3">
+           <div class="card card-body">
+               <h3>React Native Mobile App</h3>
+               <p>We're developing a cross-platform mobile application using React Native. The app aims to provide a seamless user experience and will be available on both iOS and Android platforms.</p>
+               <p>Status: Development</p>
+           </div>
+       </div>
+
+
+       <div class="col" data-bs-toggle="collapse" href="#project4" role="button" aria-expanded="false" aria-controls="project4" style="margin-top:10px;background-color: #aaaeb1;padding: 25px;">Project4
+           <button class="btn btn-primary" style="float:right"onclick="joinProject('project1')">Join</button></div>
+       <div class="collapse" id="project4">
+           <div class="card card-body">
+               <h3>Machine Learning Research</h3>
+               <p>This project involves conducting research in the field of machine learning. We are exploring new algorithms and techniques to enhance data analysis and pattern recognition.</p>
+               <p>Status: Research</p>
+           </div>
+       </div>
+
+
+       <div class="col" data-bs-toggle="collapse" href="#project5" role="button" aria-expanded="false" aria-controls="project5" style="margin-top:10px;background-color: #aaaeb1;padding: 25px;">Project5
+           <button class="btn btn-primary" style="float:right"onclick="joinProject('project1')">Join</button></div>
+       <div class="collapse" id="project5">
+           <div class="card card-body">
+               <h3>Node.js Backend Development</h3>
+               <p>We're building a scalable and efficient backend system using Node.js. The project involves API development, database management, and server-side optimization.</p>
+               <p>Status: Active Development</p>
+           </div>
+       </div>
+   </div>
+</div>
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+<script>
+   function showOptions() {
+       var options = document.querySelector('.options');
+       options.style.display = 'block';
+   }
+
+
+   function hideOptions() {
+       var options = document.querySelector('.options');
+       options.style.display = 'none';
+   }
+
+
+   function joinProject(projectId) {
+       // Replace this with the URL of the page you want to open for the project
+       var projectPageUrl = 'project.html';
+
+
+       // You can pass project details to the new page using query parameters
+       // Example: project_page.html?projectId=project1
+       window.location.href = projectPageUrl + '?projectId=' + projectId;
+   }
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
